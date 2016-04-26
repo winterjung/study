@@ -1,3 +1,27 @@
+'''
+Author
+SourMongoose
+3000
+Given two integers n and k, find the last two digits of n^k.
+
+Example:
+For n = 14 and k = 4, the output should be
+lastTwo(n, k) = "16"
+
+14^4 = 38416, so the answer is "16".
+
+[input] integer n
+
+10 ≤ n < 10^9
+
+[input] integer k
+
+1 ≤ k < 10^9
+
+[output] string
+
+The last two digits of n^k.
+'''
 def lastTwo(n, k):
     base = 1
     master = []
