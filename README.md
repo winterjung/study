@@ -1,3 +1,5 @@
 # Code_Study
-CodeFights, Codewars
-김성훈 교수님의 TensorFlow
+
+배운 것들을 올립니다.  
+웬만하면 블로그에 올리지만 알고리즘 풀이라든가  
+공부하며 필기한 것들은 이 저장소에 올립니다.
