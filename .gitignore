@@ -1,1 +1,3 @@
-TensorFlow/.ipynb_checkpoints/lec01-checkpoint.ipynb
+# Folder
+__pycache__/
+.ipynb_checkpoints/
