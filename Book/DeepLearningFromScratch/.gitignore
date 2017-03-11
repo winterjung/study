@@ -1,2 +1,7 @@
 # ipynb save files
 .ipynb_checkpoints/
+
+# example folders
+dataset/
+common/
+ch04/
