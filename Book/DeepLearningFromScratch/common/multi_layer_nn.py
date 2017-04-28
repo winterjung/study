@@ -73,6 +73,15 @@ class MultiLayerNet:
         y = self.predict(x)
         return self.last_layer.forward(y, t)
 
+    def accuracy(self, x, t):
+        y = self.predict(x)
+        y = np.argmax(y, axis=1)
+        if t.ndim != 1:
+            t = np.argmax(t, axis=1)
+
+        accuracy = np.sum(y == t) / float(x.shape[0])
+        return accuracy
+
     def gradient(self, x, t):
         """
         Returns
