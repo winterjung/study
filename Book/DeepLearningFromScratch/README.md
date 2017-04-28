@@ -19,7 +19,11 @@
 책 예제 코드 모음 : [링크](https://github.com/WegraLee/deep-learning-from-scratch)
 
 ## 공부할 거리
+- 챕터 6 : 범용 Test 클래스 만들기
 - 챕터 6 : `Adam` 기법
+- 챕터 6 : `smooth_curve` 원리 : [블로그](http://glowingpython.blogspot.kr/2012/02/convolution-with-numpy.html)
+- 챕터 6 : `배치 정규화` 이해
+- 챕터 6 : 범용 `MultiLayerNet` 클래스 만들기
 
 ## 스터디멤버
 - [@simnalamburt](https://github.com/simnalamburt/snucse/tree/master/Deep%20Learning%20from%20Scratch)
