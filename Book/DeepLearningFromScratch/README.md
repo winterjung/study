@@ -18,6 +18,9 @@
 
 책 예제 코드 모음 : [링크](https://github.com/WegraLee/deep-learning-from-scratch)
 
+## 공부할 거리
+- 챕터 6 : `Adam` 기법
+
 ## 스터디멤버
 - [@simnalamburt](https://github.com/simnalamburt/snucse/tree/master/Deep%20Learning%20from%20Scratch)
 - [@pinkrespect](https://github.com/pinkrespect/DeepLearningFromScratch)
