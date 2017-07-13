@@ -1,4 +1,8 @@
 .ipynb_checkpoints/
 test/
 train/
+log/
+model/
 *.npy
+*.csv
+*.jpg
