@@ -1,0 +1,6 @@
+log/
+checkpoint
+*.csv
+*.meta
+*.index
+*.data*
