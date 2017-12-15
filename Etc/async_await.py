@@ -53,9 +53,29 @@ async def main_3() -> None:
 
         # Fetch 1
         # request http://google.com with 5s
+        # request http://google.com sleep done
         # Fetch 2
         # request http://python.org with 2s
+        # request http://python.org sleep done
+
+
+async def main_4() -> Response:
+    async with aiohttp.ClientSession() as session:
+        requests = [asyncio.Task(fetch_with_sleep(session,
+                                                  "http://google.com",
+                                                  5)),
+                    asyncio.Task(fetch_with_sleep(session,
+                                                  "http://python.org",
+                                                  2))]
+        result = await asyncio.gather(*requests)
+        return result
+
+        # request http://google.com with 5s
+        # request http://python.org with 2s
+        # request http://python.org sleep done
+        # request http://google.com sleep done
+
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main_3())
+    loop.run_until_complete(main_4())
