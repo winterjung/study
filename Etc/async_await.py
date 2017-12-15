@@ -77,6 +77,25 @@ async def main_4() -> Response:
         # request http://python.org with 2s
         # request http://python.org sleep done
         # request http://google.com sleep done
+        # duration: 5.203770686788869
+
+
+async def main_5() -> None:
+    async with aiohttp.ClientSession() as session:
+        print("Make tasks")
+        coroutines: List
+        coroutines = [fetch_with_sleep(session, "http://google.com", 5),
+                      fetch_with_sleep(session, "http://python.org", 2)]
+        print("Before await")
+        await asyncio.gather(*coroutines)
+
+        # Make tasks
+        # Before await
+        # request http://google.com with 5s
+        # request http://python.org with 2s
+        # request http://python.org sleep done
+        # request http://google.com sleep done
+        # duration: 5.427745611125007
 
 
 if __name__ == "__main__":
