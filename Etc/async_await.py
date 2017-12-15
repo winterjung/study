@@ -17,13 +17,8 @@ async def fetch_with_sleep(session: aiohttp.ClientSession,
     async with session.get(url) as response:
         print(f"request {url} with {sleep_time}s")
         await sleep(sleep_time)
+        print(f"request {url} sleep done")
         return response
-
-
-async def fetch_all(urls: List[str]) -> Response:
-    requests = [asyncio.Task(fetch(url)) for url in urls]
-    result = await asyncio.gather(*requests)
-    return result
 
 
 async def sleep(time: int) -> None:
