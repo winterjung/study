@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Vue Sample</title>
+    </head>
+    <body>
+        <div id="app">
+            <button>Parent Component</button>
+            <my-component></my-component>
+            <my-component></my-component>
+        </div>
+        <hr>
+        <div id="app2">
+            <my-local>내용을 넣어도 되나?</my-local>
+            사이에 내용을 넣으면 바로 update 되네
+        </div>
+
+        <script src="https://unpkg.com/vue@2.3.3"></script>
+        <script>
+            // Global 
+            Vue.component("my-component", {
+                template: "<div>A global component</div>"
+            });
+
+            // local
+            var cmp = {
+                template: "<div>A local component</div>"
+            }
+    
+            var vm = new Vue({
+                el: "#app"
+            })
+
+            var vm2 = new Vue({
+                el: "#app2",
+                components: {
+                    // 태그명: 컴포넌트의 내용
+                    "my-local": cmp
+                }
+            })
+        </script>
+    </body>
+</html>
