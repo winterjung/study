@@ -1,5 +1,6 @@
 import asyncio
 import aiohttp
+import timeit
 from typing import List
 
 Response = aiohttp.client_reqrep.ClientResponse
@@ -42,6 +43,7 @@ async def main_2() -> None:
         # request http://google.com
         # Fetch 2
         # request http://python.org
+        # duration: 2.6572424746573597
 
 
 async def main_3() -> None:
@@ -57,6 +59,7 @@ async def main_3() -> None:
         # Fetch 2
         # request http://python.org with 2s
         # request http://python.org sleep done
+        # duration: 9.417719859595575
 
 
 async def main_4() -> Response:
@@ -78,4 +81,8 @@ async def main_4() -> Response:
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main_4())
+    start = timeit.default_timer()
+    loop.run_until_complete(main_2())
+    duration = timeit.default_timer() - start
+
+    print(f"duration: {duration}")
