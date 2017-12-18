@@ -6,13 +6,17 @@ Vue.component('todo-item', {
     props: ['childSlot'],
     template: '<p>{{ childSlot.text }}</p>'
 });
+
+
+Vue.component('todo-list', {
+    props: ['language'],
+    template: '<p>{{ language.id }}번째 언어는 {{ language.text }}입니다!</p>'
 });
 
 var app = new Vue({
     el: '#app',
     data: {
-        Todos: [
-            {
+        Todos: [{
                 id: 0,
                 text: 'Learn Vue.js'
             },
@@ -33,6 +37,23 @@ var app = new Vue({
         // 배열 안에 python, c++, java, objective-c 를 값으로 갖는
         // Languages 프로퍼티를 추가하여 위에 제작한 todo-list 컴포넌트에 전달하고,
         // 배열 값을 모두 for loop 로 출력하세요.
+        Languages: [{
+                id: 0,
+                text: "python!"
+            },
+            {
+                id: 1,
+                text: "c++"
+            },
+            {
+                id: 2,
+                text: "java"
+            },
+            {
+                id: 3,
+                text: "obj-c"
+            },
+        ]
 
     }
 });

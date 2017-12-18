@@ -14,7 +14,7 @@
         <todo-item v-bind:child-slot="todo" v-for="todo in Todos" :key="todo.id"></todo-item>
         <!-- 할일 #3 -->
         <!-- todo-list 컴포넌트 등록 -->
-
+        <todo-list v-bind:language="x" v-for="x in Languages" :key="x.id"></todo-list>
     </div>
     <script src="https://unpkg.com/vue@2.3.3"></script>
     <script src="js/app.js"></script>
