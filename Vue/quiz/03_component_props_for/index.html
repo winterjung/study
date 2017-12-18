@@ -11,8 +11,7 @@
     <!-- Parent Component -->
     <div id="app">
         <!-- Child Component -->
-        <todo-item v-bind:todo="todo" v-for="todo in Todos"></todo-item>
-
+        <todo-item v-bind:child-slot="todo" v-for="todo in Todos" :key="todo.id"></todo-item>
         <!-- 할일 #3 -->
         <!-- todo-list 컴포넌트 등록 -->
 

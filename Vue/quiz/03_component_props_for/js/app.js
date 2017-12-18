@@ -3,8 +3,9 @@
 
 
 Vue.component('todo-item', {
-    props: ['todo'],
-    template: '<p>{{ todo.text }}</p>'
+    props: ['childSlot'],
+    template: '<p>{{ childSlot.text }}</p>'
+});
 });
 
 var app = new Vue({
