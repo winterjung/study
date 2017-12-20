@@ -37,7 +37,7 @@
     <div class="ui bottom attached green basic button" v-show="!isEditing && todo.done">
       완료됨
     </div>
-    <div class="ui bottom attached red basic button" v-show="!isEditing && !todo.done">
+    <div class="ui bottom attached red basic button" v-on:click="completeMyTodo(todo)" v-show="!isEditing && !todo.done">
       진행중
     </div>
   </div>
@@ -60,6 +60,9 @@ export default {
     },
     deleteTodo(todo) {
       this.$emit('delete-child-todo', todo);
+    },
+    completeMyTodo(todo) {
+      this.$emit('complete-child-todo', todo);
     },
   },
 };
