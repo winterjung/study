@@ -3,7 +3,14 @@
     <p>완료된 작업 수: {{ childTodos.filter(todo => { return todo.done === true }).length }}</p>
     <p>진행중인 작업 수: {{ childTodos.filter(todo => { return todo.done === false }).length }}</p>
 
-    <my-todo v-on:delete-child-todo="deleteMyTodo" v-on:complete-child-todo="completeSomeTodo" v-for="todo in childTodos" v-bind:todo="todo" :key="todo.title"></my-todo>
+    <my-todo 
+      v-on:delete-child-todo="deleteMyTodo"
+      v-on:complete-child-todo="completeSomeTodo"
+      v-on:undoTodo="undoTodo"
+      v-for="todo in childTodos"
+      v-bind:todo="todo"
+      :key="todo.title">
+    </my-todo>
   </div>
 </template>
 
@@ -23,6 +30,10 @@ export default {
     completeSomeTodo(todo) {
       const todoIndex = this.childTodos.indexOf(todo);
       this.childTodos[todoIndex].done = true;
+    },
+    undoTodo(todo) {
+      const todoIndex = this.childTodos.indexOf(todo);
+      this.childTodos[todoIndex].done = false;
     },
   },
 };
