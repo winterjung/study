@@ -2,16 +2,28 @@
   <div>
     <todo-list v-bind:child-todos="todos"></todo-list>
     <!-- 이것도 동작함 <TodoList></TodoList> -->
+    <create-todo v-on:hey-please-create-todo="addTodo"></create-todo>
   </div>
 </template>
 
 <script>
 import TodoList from './components/TodoList';
+import CreateTodo from './components/CreateTodo';
 
 export default {
   name: 'app',
   components: {
     TodoList,
+    CreateTodo,
+  },
+  methods: {
+    addTodo(todo) {
+      this.todos.push({
+        title: todo.title,
+        description: todo.description,
+        done: false,
+      });
+    },
   },
   data() {
     return {
