@@ -70,3 +70,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+span {
+  cursor: pointer;
+}
+</style>
