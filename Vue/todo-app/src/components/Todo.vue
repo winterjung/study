@@ -11,6 +11,9 @@
         <span class="right floated edit icon" v-on:click="showForm">
           <i class="edit icon"></i>
         </span>
+        <span class="right floated trash icon" v-on:click="deleteTodo(todo)">
+          <i class="trash icon"></i>
+        </span>
       </div>
     </div>
     <!-- 수정 모드에서 보이게 될 컨텐츠 -->
@@ -54,6 +57,9 @@ export default {
     },
     hideForm() {
       this.isEditing = false;
+    },
+    deleteTodo(todo) {
+      this.$emit('delete-child-todo', todo);
     },
   },
 };
