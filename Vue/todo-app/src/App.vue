@@ -1,8 +1,13 @@
 <template>
-  <div>
-    <todo-list v-bind:child-todos="todos"></todo-list>
-    <!-- 이것도 동작함 <TodoList></TodoList> -->
-    <create-todo v-on:hey-please-create-todo="addTodo"></create-todo>
+  <div id="app">
+    <h2 class="ui dividing centered header">Vue.js로 만든 Todo 앱</h2>
+    <div class="ui three column grid centered">
+      <div class="column">
+        <todo-list v-bind:child-todos="todos" ></todo-list>
+        <!-- 이것도 동작함 <TodoList></TodoList> -->
+        <create-todo v-on:hey-please-create-todo="addTodo"></create-todo>
+      </div>
+    </div>
   </div>
 </template>
 
