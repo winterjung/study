@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import sweetalert from 'sweetalert';
 import TodoList from './components/TodoList';
 import CreateTodo from './components/CreateTodo';
 
@@ -23,6 +24,7 @@ export default {
         description: todo.description,
         done: false,
       });
+      sweetalert('성공!', '해야할 일이 등록되었습니다.', 'success');
     },
   },
   data() {
