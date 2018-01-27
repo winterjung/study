@@ -6,11 +6,11 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
-    println!("🔍  숫자를 맞춰보세요!");
+    println!("🔍  숫자를 맞춰봐!");
     
     let secret = rand::thread_rng().gen_range(1, 101);
     
-    println!("👄  비밀 숫자를 넣어줘");
+    println!("👄  비밀 숫자를 말해줘");
 
     loop {
         print!("❯❯❯ ");
@@ -30,10 +30,10 @@ fn main() {
         };
 
         match guess.cmp(&secret) {
-            Ordering::Less => println!("⚠️  너무 작아"),
-            Ordering::Greater => println!("⚠️  너무 커"),
+            Ordering::Less => println!("⚠️  너무 작은걸"),
+            Ordering::Greater => println!("⚠️  너무 큰걸"),
             Ordering::Equal => {
-                println!("✅  딱 맞네");
+                println!("✅  정답이야!");
                 break;
             }
         }
