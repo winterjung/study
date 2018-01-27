@@ -1,0 +1,7 @@
+[package]
+
+name = "hello_winterj"
+version = "1.0.0"
+authors = [
+    "JungWinter <wintermy201@gmail.com>"
+]
