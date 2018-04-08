@@ -1,0 +1,42 @@
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        gunicorn/19.7.1
+Server Hostname:        127.0.0.1
+Server Port:            8000
+
+Document Path:          /sleep/3
+Document Length:        4 bytes
+
+Concurrency Level:      16
+Time taken for tests:   6.023 seconds
+Complete requests:      32
+Failed requests:        0
+Total transferred:      5216 bytes
+HTML transferred:       128 bytes
+Requests per second:    5.31 [#/sec] (mean)
+Time per request:       3011.707 [ms] (mean)
+Time per request:       188.232 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.85 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.6      1       2
+Processing:  3002 3007   4.0   3006    3019
+Waiting:     3002 3007   4.0   3006    3018
+Total:       3002 3008   4.3   3007    3019
+
+Percentage of the requests served within a certain time (ms)
+  50%   3007
+  66%   3008
+  75%   3011
+  80%   3012
+  90%   3013
+  95%   3019
+  98%   3019
+  99%   3019
+ 100%   3019 (longest request)

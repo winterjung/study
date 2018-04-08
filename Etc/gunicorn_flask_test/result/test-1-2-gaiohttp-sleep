@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient).....done
+
+
+Server Software:        Python/3.6
+Server Hostname:        127.0.0.1
+Server Port:            8000
+
+Document Path:          /sleep/3
+Document Length:        4 bytes
+
+Concurrency Level:      16
+Time taken for tests:   61.469 seconds
+Complete requests:      32
+Failed requests:        12
+   (Connect: 0, Receive: 0, Length: 12, Exceptions: 0)
+Total transferred:      3060 bytes
+HTML transferred:       80 bytes
+Requests per second:    0.52 [#/sec] (mean)
+Time per request:       30734.346 [ms] (mean)
+Time per request:       1920.897 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.05 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.2      1       1
+Processing: 30250 30733 489.9  31215   31215
+Waiting:        0 10392 10717.4   9012   30247
+Total:      30251 30734 489.8  31216   31216
+
+Percentage of the requests served within a certain time (ms)
+  50%  31216
+  66%  31216
+  75%  31216
+  80%  31216
+  90%  31216
+  95%  31216
+  98%  31216
+  99%  31216
+ 100%  31216 (longest request)
