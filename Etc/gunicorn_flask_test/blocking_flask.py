@@ -14,10 +14,10 @@ def sleeping(count):
     return 'done'
 
 
-@app.route('/request')
-def request():
+@app.route('/request/<int:count>')
+def request(count):
     print('request')
-    r = requests.get('http://httpbin.org/delay/5')
+    r = requests.get(f'http://httpbin.org/delay/{count}')
     print('request done')
     return str(r.status_code)
 
@@ -26,7 +26,7 @@ def request():
 def compute(count):
     s = 0
     for i in range(count):
-        s += 1
+        s += i
     print(s)
     return str(s)
 
